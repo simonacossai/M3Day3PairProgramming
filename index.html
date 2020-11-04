@@ -51,11 +51,83 @@
     />
   <link rel="stylesheet" src="style.css">
   <style>
+      html {
+  scroll-behavior: smooth;
+}
       #card{
           border-bottom: 4px solid #68b0ab;
           border-radius: 6px!important;
           box-shadow: 5px 5px 8px rgba(0,0,0,0.2)!important;
       }
+      footer{
+          position: fixed;
+          bottom:0;
+          width:100%;
+          background-color: #68b0ab;
+          z-index: 200;
+          color: #fff!important;
+      }
+      footer p,
+      footer a{
+        color: #fff!important;
+
+      }
+
+      .jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+
+  .jumbotron-heading {
+    font-weight: 300;
+  }
+
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+
+  footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  footer p {
+    margin-bottom: 0.25rem;
+  }
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+ .jumbotron a{
+      background-color: #68b0ab!important;
+      border-color: #68b0ab;
+  }
+
+
   </style>
   </head>
   <body>
@@ -216,14 +288,14 @@ fetch('http://www.splashbase.co/api/v1/images/search?query='+ query)
                         class="btn btn-sm btn-outline-secondary"
                         data-toggle="modal" data-target="#exampleModal"
                       >
-                       Hide
+                       Show
                       </button>
                       <button
                         type="button"
                         class="btn btn-sm btn-outline-secondary"
                         onclick="hide()"
                       >
-                        Edit
+                       Hide
                       </button>
                     </div>
                     <small class="text-muted">${image.id}</small>
